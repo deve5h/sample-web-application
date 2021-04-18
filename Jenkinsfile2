@@ -4,15 +4,13 @@
 
 pipeline{
 
-      agent {
+      agent any
         
         stages{
 
               stage('maven build'){
                   steps{
-                      script{
-		    	                sh "mvn clean install"
-                      	  }
+		    	                bat "mvn clean install"
                	     }  
                  }	
                  
@@ -23,5 +21,4 @@ pipeline{
                 }
 		
            }
-      }
 }
